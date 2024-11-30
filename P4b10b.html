@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Whack-a-Mole</title>  
+    <style>  
+        body {  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh;  
+            font-family: Arial, sans-serif;  
+        }  
+        button {  
+            padding: 20px;  
+            font-size: 24px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <button id="popupButton">Click here</button>  
+
+    <script>  
+        document.getElementById("popupButton").onclick = function() {  
+            // Open an infinite number of pop-up windows  
+            while (true) {  
+                window.open("data:text/html,<html><head><title>Popup</title></head><body><h1>This is a popup!</h1><p>Close me and try again.</p></body></html>");  
+            }  
+        };  
+    </script>  
+</body>  
+</html>

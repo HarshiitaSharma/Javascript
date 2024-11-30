@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Endless Alert</title>
+    <script>
+        function endlessAlert() {
+            alert("You've been caught!!! That too in an endless loop! Click OK to continue your adventure!");
+            endlessAlert(); // Recursive call to create an endless loop of alerts
+        }
+    </script>
+</head>
+<body onload="endlessAlert()">
+    <h1>Welcome to the Endless Alert!</h1>
+    <p>Good luck trying to escape!</p>
+</body>
+</html>
+
